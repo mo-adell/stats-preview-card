@@ -119,7 +119,7 @@ h1 span{
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     section.card {
         width: 90%;
         grid-template-columns: 1fr;
