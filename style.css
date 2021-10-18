@@ -1,0 +1,32 @@
+:root {
+    --mainBg: hsl(233, 47%, 7%);
+    --cardBg: hsl(244, 38%, 16%);
+    --accentClr: hsl(277, 64%, 61%);
+
+    --mainFontClr: hsl(0, 0%, 100%);
+    --mainP-Clr: hsla(0, 0%, 100%, 0.75);
+    --mainStatClr: hsla(0, 0%, 100%, 0.6);
+
+    --fontVar: 400 1rem/1.1 'Inter', sans-serif;
+    --fontVar2: 400 1rem/1.1 'Lexend Deca', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: var(--fontVar);
+}
+
+
+
+
+
+
+
+
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
