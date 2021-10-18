@@ -7,8 +7,8 @@
     --mainP-Clr: hsla(0, 0%, 100%, 0.75);
     --mainStatClr: hsla(0, 0%, 100%, 0.6);
 
-    --fontVar: 400 1rem/1.1 'Inter', sans-serif;
-    --fontVar2: 400 1rem/1.1 'Lexend Deca', sans-serif;
+    --fontVar: 400 1rem/1.4 'Inter', sans-serif;
+    --fontVar2: 400 1rem/1.4 'Lexend Deca', sans-serif;
 }
 
 * {
@@ -19,11 +19,144 @@
 
 body {
     font: var(--fontVar);
+    background: var(--mainBg);
+    color: var(--mainFontClr);
+
+}
+
+main {
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    
+}
+
+section.card {
+    width: 80%;
+    background: var(--cardBg);
+    place-self: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-content: center;
+    border-radius: .8rem;
+    position: relative;
+}
+
+.text,.img {
+    min-width: 50%;
+}
+
+section.text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 7% 18% 7% 15%;
+
+}
+
+.text > h1{
+    font-size: 2rem;
+}
+
+h1 span{
+    color: var(--accentClr);
+}
+
+.text > p {
+    color: var(--mainStatClr);
+    margin-top: 2rem;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.text > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 5rem;
+    width: 90%;
+}
+
+.text > div div{
+    display: flex;
+    flex-flow: column wrap;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.text > div div>span {
+    color: var(--mainStatClr);
+    font: var(--fontVar2);
+    font-size: .8rem;
+    letter-spacing: .1rem;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 .8rem .8rem 0;
+    object-fit: cover;
+    
+}
+
+.img {
+    position: relative;
+}
+
+.img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(47, 10, 70, 0.623);
+    z-index: 222 ;
 }
 
 
 
+@media screen and (max-width: 600px) {
+    section.card {
+        width: 90%;
+        grid-template-columns: 1fr;
+        margin: 5rem 0 5rem;
 
+    }
+
+    .text > div {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .img img {
+        width: 100%;
+        height: 100%;
+        border-radius: .8rem .8rem 0 0;
+        object-fit: cover;        
+    }
+
+    .img {
+        grid-row: 1;
+
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    section.text {
+        align-items: center;
+        text-align: center;
+    }
+}
 
 
 
